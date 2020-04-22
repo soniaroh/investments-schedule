@@ -2,9 +2,9 @@
   "name": "schedule-of-investments",
   "version": "1.0.0",
   "description": "table of investments",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "react-dev": "webpack -d --watch"
   },
   "repository": {
@@ -34,10 +34,12 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
+    "jest": "^25.4.0",
     "react-test-renderer": "^16.5.1",
     "style-loader": "^0.23.0",
     "webpack": "^4.17.2",
