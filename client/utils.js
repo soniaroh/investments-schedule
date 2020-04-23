@@ -13,7 +13,6 @@ export const convertDigit = (str1, str2) => {
       str = [str[2], str[0], str[1]].join('-');
       if (str === str2) return true;     
     }
-    console.log(str1, str2)
     return false
   } else {
     return true;

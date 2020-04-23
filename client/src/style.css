@@ -2,3 +2,44 @@
   margin: 40px;
   border: 5px dotted pink;
 }
+
+.margin {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.header {
+  font-weight: 900;
+}
+
+.input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 20%;
+  display: block;
+  border: 0.3rem solid blue;
+  transition: all 0.3s;
+  float: left;
+}
+
+.collapsible {
+  color: #444;
+  cursor: pointer;
+  padding: 5px;
+  width: 10%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}

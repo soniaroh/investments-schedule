@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import * as style from './style.css';
 import { trimPrice, convertDigit } from '../utils';
 
 class InvestmentList extends React.Component {
@@ -25,14 +25,14 @@ class InvestmentList extends React.Component {
       <div>
         <table className="table table-hover table-dark">
           <tbody>
-            <tr className="thead-light">{titles.map((title, index) => <td key={index}>{title}</td>)}</tr>
+            <tr className={style.header}>{titles.map((title, index) => <td key={index}>{title}</td>)}</tr>
             {schedule.map((item, index) => convertDigit(item.issued_assets, date) ?
-              <tr key={index}>
-                <td>{item.name}{' '}<button type="button" className="btn btn-light" value={index} onClick={this.handleCollapse}>{collapsed[index] ? '-' : '+'}</button></td>
-                <td><tr><br /></tr>{item.issued_assets.map(asset => collapsed[index] ? <tr><td>{asset.asset_class}</td></tr> : '')}</td>
-                <td><tr><br /></tr>{item.issued_assets.map(asset => collapsed[index] ? <tr><td>{asset.investment_date}</td></tr> : '')}</td>
-                <td>{trimPrice(item.quantity)}{item.issued_assets.map(asset => collapsed[index] ? <tr><td>{trimPrice(asset.quantity)}</td></tr> : '')}</td>
-                <td>{trimPrice(item.cost.$)}{item.issued_assets.map(asset => collapsed[index] ? <tr><td>{trimPrice(asset.cost.$)}</td></tr> : '')}</td>
+              <tr key={index} className={style.rows}>
+                <td>{item.name}<button type="button" className={style.collapsible} value={index} onClick={this.handleCollapse}>{collapsed[index] ? ' -' : ' +'}</button></td>
+                <td>{item.issued_assets.map(asset => collapsed[index] ? <div>{asset.asset_class}</div> : '')}</td>
+                <td>{item.issued_assets.map(asset => collapsed[index] ? <div>{asset.investment_date}</div> : '')}</td>
+                <td>{trimPrice(item.quantity)}{item.issued_assets.map(asset => collapsed[index] ? <div>{trimPrice(asset.quantity)}</div> : '')}</td>
+                <td>{trimPrice(item.cost.$)}{item.issued_assets.map(asset => collapsed[index] ? <div>{trimPrice(asset.cost.$)}</div> : '')}</td>
               </tr>
               : '')}
           </tbody>

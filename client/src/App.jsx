@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import InvestmentList from './InvestmentList.jsx'
+import InvestmentList from './InvestmentList.jsx';
+import * as style from './style.css';
 
 
 class App extends Component {
@@ -27,7 +28,7 @@ class App extends Component {
           schedule: data
         });
       },
-      error: function (err) {
+      error: (err) => {
         console.log(err)
       },
     });
@@ -43,10 +44,10 @@ class App extends Component {
     const { schedule, date } = this.state;
     return (
       <div className="container">
-        <div>
-          <h3>Sample Ventures Fund</h3>
+        <h3>Sample Ventures Fund</h3>
+        <div className={style.margin}>
+          <input type="date" placeholder="MM/DD/YYYY" onChange={this.handleDate} value={date} />
         </div>
-        <input type="date" onChange={this.handleDate} value={date} />
         <InvestmentList schedule={schedule} date={date} />
       </div>
     );
