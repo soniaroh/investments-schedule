@@ -19,7 +19,7 @@
   "homepage": "https://github.com/nr431207/Schedule-of-Investments#readme",
   "dependencies": {
     "file-loader": "^2.0.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "react": "^16.5.0",
     "react-dev": "0.0.1",
     "react-dom": "^16.5.0",
