@@ -23,7 +23,7 @@
     "react": "^16.5.0",
     "react-dev": "0.0.1",
     "react-dom": "^16.5.0",
-    "webpack-cli": "^3.1.0",
+    "webpack-cli": "^3.3.12",
     "yarn": "^1.9.4"
   },
   "devDependencies": {
